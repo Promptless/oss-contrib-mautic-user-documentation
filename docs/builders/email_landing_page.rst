@@ -156,6 +156,51 @@ You define options as elements of the ``'editor_fonts'`` array in the local conf
     ),
 
 
+Inserting tokens
+****************
+
+The Builder allows you to insert tokens - dynamic placeholders that Mautic replaces with Contact-specific data when sending Emails or displaying Landing Pages. Tokens enable personalization, such as addressing recipients by name or including their Company details.
+
+Accessing the token picker
+==========================
+
+To insert a token into your content:
+
+#. Click on a text area in the Builder to open the CKEditor text editor.
+
+#. Look for the token dropdown - often accessible via a token icon or by typing ``{`` to trigger the autocomplete.
+
+#. Select a token from the dropdown list.
+
+Token categories
+================
+
+Tokens in the dropdown are organized by category, with each token displaying a prefix that indicates its source. This makes it easier to find the token you need.
+
+The categories appear in the following order:
+
+#. **Contact** - Contact field tokens like 'Contact: Email', 'Contact: Firstname', 'Contact: Lastname'
+
+#. **Company** - Company field tokens like 'Company: Name', 'Company: Address'
+
+#. **Owner** - Contact Owner tokens like 'Owner: Firstname', 'Owner: Email'
+
+#. **Page** - Landing Page tokens showing the page alias and ID, for example 'Page: my-landing-page (123)'
+
+#. **DWC** - Dynamic Web Content tokens
+
+#. **Focus** - Focus Item tokens
+
+#. **Asset** - Asset link tokens
+
+#. **Email** - Email-specific tokens
+
+#. **Other** - Any other available tokens
+
+Each token label includes its category prefix, making it clear what type of data the token inserts. For example, 'Contact: Email' inserts the Contact's email address, while 'Owner: Email' inserts the email address of the Contact's assigned owner.
+
+For a complete list of available tokens and their syntax, see :doc:`/configuration/variables`.
+
 Reporting bugs
 ***************
 
