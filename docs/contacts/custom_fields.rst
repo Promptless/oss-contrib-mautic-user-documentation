@@ -92,6 +92,29 @@ You can create additional Custom Fields and define the data type you want that f
 
 |
 
+.. vale off
+
+Deleting Custom Fields
+**********************
+
+.. vale on
+
+You can delete Custom Fields you've created, but you can't delete fields that are in use by Segments. If you try to delete a Custom Field that's used in one or more Segment filters, Mautic displays an error message and prevents the deletion.
+
+To delete a Custom Field that's in use:
+
+1. Navigate to the Segments using the field. You can find these by checking your Segment filter configurations.
+
+2. Edit each Segment and remove the Custom Field from its filters.
+
+3. Save the Segment.
+
+4. Return to the Custom Fields page and delete the field.
+
+.. note::
+
+    This validation applies to both the user interface and the API. Attempting to delete a field via the API when it's in use by a Segment returns an ``HTTP 409 (Conflict)`` response.
+
 Creating Custom Fields via a command
 ************************************
 
