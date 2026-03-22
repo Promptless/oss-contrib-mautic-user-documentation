@@ -32,10 +32,11 @@ There are different types of documentation available to help you navigate your w
    :caption: Getting Started with Mautic
    :maxdepth: 2
    :hidden:
-   
+
    getting_started/how_to_install_mautic
    getting_started/switching_composer
    getting_started/how_to_update_mautic
+   getting_started/release_notes
 
 .. toctree:: 
    :caption: Troubleshooting
