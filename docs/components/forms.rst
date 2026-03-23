@@ -99,10 +99,21 @@ The available details fields are:
      
        Once updated, in the **Fields** tab, look at the bottom of the field's card. Use the lowercase version of the text shown after **contact:** for ``ALIAS``. For example, use ``timezone`` if the card shows ``contact: Timezone``.
    * - ``{pagelink=ID}``
-     - Replace ``ID`` with the ID of a Mautic Landing Page.
+     - Replace ``ID`` with the ID of a Mautic Landing Page. This placeholder generates the full URL to the Landing Page.
      - Go to **Components > Landing Pages** and look at the **ID** column.
 
-.. vale on
+  .. vale on
+
+  **Redirect URL format examples**
+
+  When using **Redirect URL**, Mautic validates the URL before saving. The URL must be valid and any placeholders must use the supported formats shown above. Examples of valid redirect URLs:
+
+  - A standard URL: ``https://example.com/thank-you``
+  - A URL with Contact data: ``https://example.com/?email={contactfield=email}``
+  - A Landing Page with Form data: ``{pagelink=123}?source={formfield=source}``
+  - A Landing Page with multiple placeholders: ``{pagelink=123}?{formfield=abc}&{contactfield=email}``
+
+  Since ``{pagelink=ID}`` generates the full Landing Page URL, you can use it as the base of your redirect URL and append query parameters or path segments.
 
 Fields
 ======
