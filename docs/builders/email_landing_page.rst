@@ -60,6 +60,28 @@ Asset manager
 
 With the Asset Manager is easier to organize your media files and it's enough to double click the image to change it.
 
+Copying and pasting Components
+==============================
+
+You can copy and paste Components within the Builder using keyboard shortcuts. This allows you to duplicate sections, content blocks, or any other Components, and transfer them between different Emails or Landing Pages.
+
+To copy and paste a Component:
+
+#. Select the Component you want to copy by clicking on it in the canvas or in the Layer Manager.
+
+#. Press ``Ctrl+C`` on Windows/Linux or ``Cmd+C`` on macOS to copy the Component.
+
+#. Navigate to the location where you want to paste the Component. This can be in the same Email or Landing Page, or a different one.
+
+#. Select the Component after which you want to insert the copied content.
+
+#. Press ``Ctrl+V`` on Windows/Linux or ``Cmd+V`` on macOS to paste the Component.
+
+The pasted Component includes all styling, so you don't need to reconfigure the appearance after pasting.
+
+.. note::
+    You can copy Components from one Email or Landing Page and paste them into another by copying the Component, navigating to a different Email or Landing Page in the Builder, and then pasting.
+
 About the builder
 *****************
 
