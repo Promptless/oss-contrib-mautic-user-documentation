@@ -55,10 +55,15 @@ The code is there when you need it
 
 You don't have to care about the code, but it's always there, available for you. When it's done, you can grab it and use it wherever you want. Developers could also implement their own storage interfaces to use inside the editor.
 
-Asset manager
+Asset Manager
 =============
 
-With the Asset Manager is easier to organize your media files and it's enough to double click the image to change it.
+The Asset Manager handles image uploads and selection in the GrapesJS Builder. Double-click any image Component to open the Asset Manager, where you can upload new images or select from previously uploaded files.
+
+Supported image formats
+-----------------------
+
+The Builder supports PNG, JPG/JPEG, GIF, WebP, SVG, and PDF images. Landing Pages support SVG files, but they aren't recommended for Emails because most email clients don't render them reliably. Use PNG, JPG, or GIF for Email content instead.
 
 About the builder
 *****************
