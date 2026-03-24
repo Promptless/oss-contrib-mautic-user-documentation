@@ -164,6 +164,25 @@ Creating filters
 
 #. Provide the content in the slot within the text editor area. Mautic displays this content when the filters match.
 
+Available filters
+-----------------
+
+The filters tab offers the same filter types available in Segments, including:
+
+- **Contact fields** - Filter by any Contact field value, such as country, city, or Custom Fields
+- **Contact Tags** - Filter by Tags assigned to Contacts
+- **Contact behavior** - Filter by Contact actions and engagement history
+
+For example, to show specific content to Contacts with a particular Tag:
+
+#. Create a Tag in Mautic and assign it to the relevant Contacts
+#. Create a non-Campaign-based Dynamic Web Content item
+#. In the 'Filters' tab, select 'Tags' from the filter dropdown
+#. Choose the operator - for example 'includes' - and select the Tag
+#. Add the content you want tagged Contacts to see
+
+Contacts matching the Tag filter see the Dynamic Content. Other visitors see the default content defined on your website.
+
 .. vale off
 
 Implementing Dynamic Web Content
