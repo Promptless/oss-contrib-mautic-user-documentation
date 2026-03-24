@@ -227,8 +227,8 @@ Here are the different conditions that Mautic offers in the Campaign Builder:
      - Checks if the Contact is a member of another Campaign.
    * - **Contact device**    
      - Checks if the Contact has interacted with your Campaign from a specific device type, brand, or OS.
-   * - **Contact field value**    
-     - Checks if the information matches the selected criteria on the Contact record, the Contact's primary Company, or UTM tags.
+   * - **Contact field value**
+     - Checks if the information matches the selected criteria on the Contact record, the Contact's primary Company, or UTM tags. This condition supports the same operators available in Segment filters, including pattern matching operators such as ``regexp`` and ``not regexp``. For a complete list of available operators, see :ref:`segments/manage_segments:Operators`.
    * - **Contact owner**    
      - Checks if the selected User is the Contact's owner.
    * - **Contact Segments**    
