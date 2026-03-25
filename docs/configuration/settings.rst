@@ -406,6 +406,18 @@ Unsubscribe settings
 
 * **Show Contact's preferred Channel option** - If you have multiple Channels available within your Mautic instance. For example; Email, ``SMS``, mobile push, web notifications, etc., Contacts can choose their preferred Channel. This can be useful if you are using the Marketing Messages feature of Mautic. More information about the Preference Center is available :doc:`here</contacts/preference_center>`.
 
+Email list settings
+===================
+
+.. image:: images/email-list-settings.png
+  :width: 600
+  :alt: Screenshot showing Email List Settings Configuration in Mautic
+
+* **Columns** - Select from the left which fields appear on the Email list (when you go to Channels > Emails and view the list).
+
+To display the fields, select them from the left and move them to the right column, or remove from the right column if you don't want them to appear in the list.
+
+Available columns include: Name, Subject, Description, Email Type, Language, Category, Theme, Published, Publish Up, Publish Down, Stats, Created By, Created Date, Modified Date, and ID. The Stats column displays pending, queued, sent, and read information.
 
 .. vale off
 
