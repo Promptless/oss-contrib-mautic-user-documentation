@@ -688,6 +688,17 @@ Mautic tracking settings
   * The tracking code automatically detects the Preferred Timezone and Preferred Locale fields.
   * Landing Pages including 4-byte UTF-8 characters, such as emojis and some Chinese or other non-Latin characters, in the Landing Page title or URL aren't tracked on a Contact's activity history in Mautic. Mautic tracks all Latin characters used in English and other western languages which are of 1-byte.
 
+Auto asset tracking
+===================
+
+Auto asset tracking creates remote Assets automatically when Contacts click download links on pages with the Mautic tracking script. This lets you track file downloads from your website without manually creating an Asset for each file.
+
+* **Enable auto asset tracking** - Select **Yes** to enable auto asset tracking. When enabled, Mautic includes additional JavaScript in the tracking script that intercepts clicks on download links. The default is **No**.
+
+* **Default category for auto-tracked assets** - Select a Category to assign to automatically created remote Assets. This helps organize auto-tracked Assets separately from manually created ones.
+
+For detailed information about how auto asset tracking works and how to control tracking behavior on individual links, see :ref:`components/assets:Auto asset tracking`.
+
 Facebook pixel
 ==============
 

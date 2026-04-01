@@ -169,3 +169,71 @@ By default, Mautic supports the following file types for direct display in the b
 .. vale on
 
 If you want to change this default behavior, you can modify the ``local.php`` file and set an array of extensions for the ``streamed_extensions`` parameter.
+
+.. vale off
+
+Auto asset tracking
+===================
+
+.. vale on
+
+Auto asset tracking creates remote Assets automatically when Contacts click download links on pages with the Mautic tracking script. This lets you track file downloads without manually creating an Asset for each file.
+
+Enabling auto asset tracking
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To enable auto asset tracking:
+
+1. Navigate to **Configuration > Tracking Settings**
+2. Set **Enable auto asset tracking** to **Yes**
+3. Optionally select a **Default category for auto-tracked assets** to organize auto-tracked Assets
+4. Save the configuration
+
+How it works
+~~~~~~~~~~~~
+
+When you enable auto asset tracking:
+
+1. Mautic adds extra JavaScript to the tracking script (mtc.js)
+2. The JavaScript intercepts clicks on download links (PDF, DOC, XLS, and other common file types)
+3. When a Contact clicks a download link, Mautic creates or locates the corresponding remote Asset
+4. The Contact redirects through the tracking URL, recording the download in their activity history
+5. The file downloads normally after tracking completes
+
+.. note::
+
+    Auto asset tracking creates remote Assets, meaning Mautic stores a reference to the file URL rather than hosting the file itself. The original file stays on your web server.
+
+Controlling tracking behavior with HTML attributes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You can control auto asset tracking behavior on individual links using HTML data attributes:
+
+``data-mautic-track``
+    Force tracking on a link even when auto asset tracking is disabled globally. Useful for tracking specific high-value downloads while keeping the global setting disabled.
+
+    .. code-block:: html
+
+        <a href="https://example.com/report.pdf" data-mautic-track>Download Report</a>
+
+``data-mautic-ignore``
+    Exclude a link from tracking even when auto asset tracking is enabled. Useful for internal documents or files you don't want to track.
+
+    .. code-block:: html
+
+        <a href="https://example.com/internal.pdf" data-mautic-ignore>Internal Document</a>
+
+``data-mautic-track-title``
+    Set a custom title for the auto-created Asset. Without this attribute, Mautic uses the file name as the Asset title.
+
+    .. code-block:: html
+
+        <a href="https://example.com/q1-2024.pdf" data-mautic-track-title="Q1 2024 Financial Report">Download Report</a>
+
+.. tip::
+
+    Combine ``data-mautic-track`` with ``data-mautic-track-title`` to track specific downloads with meaningful Asset names when global tracking is disabled:
+
+    .. code-block:: html
+
+        <a href="https://example.com/whitepaper.pdf" data-mautic-track data-mautic-track-title="Industry Whitepaper 2024">Download Whitepaper</a>
