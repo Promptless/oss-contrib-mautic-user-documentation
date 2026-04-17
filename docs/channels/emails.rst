@@ -372,6 +372,58 @@ For example:
 
     <a href="{webview_url}" target="_blank">View in your browser</a>
 
+.. vale off
+
+Sending to Do Not Contact Contacts
+**********************************
+
+.. vale on
+
+By default, Mautic respects Do Not Contact (DNC) status and doesn't send Emails to Contacts on the DNC list. However, some scenarios require sending critical communications to Contacts who have previously unsubscribed - for example, transactional or compliance-related messages.
+
+The ``sendToDnc`` setting allows an Email to bypass DNC restrictions for Contacts who unsubscribed themselves or were manually marked as DNC. Mautic still respects hard bounces since those addresses can't receive Emails anyway.
+
+When enabled, Mautic sends Emails to Contacts with these DNC reasons:
+
+- **Unsubscribed** - Contacts who unsubscribed themselves
+- **Manual** - Contacts manually marked as DNC by a Mautic User
+
+Mautic still blocks Emails to Contacts with this DNC reason:
+
+- **Bounced** - Contacts whose Email addresses had a hard bounce
+
+Use cases
+=========
+
+This feature is useful for:
+
+- **Transactional Emails** - Order confirmations, password resets, and account notifications that Contacts need regardless of marketing preferences
+- **Compliance communications** - Legal notices, privacy policy updates, or terms of service changes
+- **Account-related messages** - Security alerts, subscription renewals, or service interruptions
+
+.. vale off
+
+Enabling send to DNC
+====================
+
+.. vale on
+
+Currently, you can only configure the ``sendToDnc`` setting through the Mautic API. Set the ``sendToDnc`` field to ``true`` when creating or updating an Email via the API.
+
+Example API request to enable send to DNC:
+
+.. code-block:: json
+
+    {
+        "name": "Important Account Notice",
+        "subject": "Important update about your account",
+        "sendToDnc": true
+    }
+
+.. warning::
+
+    Use this feature responsibly. Sending marketing content to unsubscribed Contacts may violate anti-spam regulations such as CAN-SPAM, GDPR, or other privacy laws. Only enable this setting for legitimate transactional or compliance-related communications where you have a legal basis to contact the recipient.
+
 Bounce management
 *****************
 
