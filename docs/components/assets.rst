@@ -95,6 +95,8 @@ Depending on the type of file uploaded, a preview may display after the upload c
   :width: 600
   :alt: Screenshot of create new Asset interface
 
+Mautic validates that the uploaded file's content matches its extension. This prevents uploading disguised files - for example, a PHP script renamed with a ``.png`` extension. If the content doesn't match the extension, the upload fails with an error message.
+
 .. vale off
 
 Using remote Assets
@@ -109,6 +111,31 @@ Instead of uploading a file from your computer, you can either provide a link to
 You can enable optional remote URL validation by adding ``'validate_remote_domains' => true`` to the ``config/local.php`` file.
 
 When you enable this validation, Mautic only allows domains listed in **Configuration > System Settings > Miscellaneous Settings > Allowed remote domains**. The validation also considers the domain of your Mautic instance valid.
+
+**Remote Asset MIME type validation**
+
+Mautic validates remote Assets to confirm they're genuine files of the expected type. When you provide a remote URL, Mautic:
+
+1. Checks the HTTP Content-Type header from the remote server
+2. Downloads the first 1KB of the file to verify the content type using magic bytes
+
+Both checks must pass for Mautic to accept the remote Asset. If the remote server doesn't return a valid Content-Type, or if the file content doesn't match an allowed extension, Asset creation fails.
+
+.. note::
+    The remote server must respond within 5 seconds. Some servers behind restrictive firewalls may not work with remote Assets.
+
+.. vale off
+
+Asset validation errors
+~~~~~~~~~~~~~~~~~~~~~~~
+
+.. vale on
+
+Mautic may display the following error messages during Asset upload:
+
+- 'The mimetype of the remote file could not be resolved' - The remote URL didn't return a valid Content-Type header, or Mautic couldn't determine the file type. Verify the URL is accessible and points directly to a file.
+- 'The file content does not match the file extension' - The actual file content doesn't match its extension. For example, if you renamed a text file to have a ``.jpg`` extension, this error appears. Use the correct file extension.
+- 'Upload failed as the file mimetype does not match any of the allowed extensions' - The file type isn't in the list of allowed extensions. Check **Configuration > Asset Settings** for the allowed file types.
 
 .. vale off
 
