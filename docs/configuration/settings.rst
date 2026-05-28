@@ -59,15 +59,6 @@ Cross-Origin Resource Sharing - CORS - allows data to pass between your website 
 
 * **Valid Domains** - A list of domains allowed to communicate with your Mautic instance. In the text box, list the exact URL of the top level domain you want to allow, one per line. For example: ``http://www.example.com`` tracks any activity on non-secure example.com pages, but ``https://www.example.com`` won't because this is only tracking on a secure ``https://`` website.
 
-<<<<<<< HEAD
-* **Trusted hosts** - To explicitly allow the hosts that can send requests to Mautic. You can use regular expression and separate multiple hosts with a comma. i.e ``.*\.?example.com$``. If left empty, Mautic will respond to all hosts.
-  
-* **Trusted proxies** - To configure the IP addresses that Mautic should trust as proxies. This setting is mandatory when using Mautic behind an SSL terminating proxy. Separate multiple IP addresses by a comma. i.e ``127.0.0.1, 10.0.0.0/8, fc00::/7``
-
-.. note:: 
-||||||| 4d694ef
-.. note:: 
-=======
 * **Trusted hosts** - Explicitly allow hosts that can send requests to Mautic. Enter the domain name where you installed Mautic, such as ``mautic.example.com``. Separate multiple hosts with a comma. You can also use regular expressions for advanced matching, which Mautic encloses with ``/`` delimiters. For instance, ``.*\.?example.com$`` becomes ``/.*\.?example.com$/``. If left empty, Mautic responds to all hosts.
 
   Mautic validates your input during the save process. Invalid domain names or regular expression patterns trigger an error message.
@@ -79,7 +70,6 @@ Cross-Origin Resource Sharing - CORS - allows data to pass between your website 
 * **Trusted proxies** - To configure the IP addresses that Mautic should trust as proxies. This setting is mandatory when using Mautic behind an SSL terminating proxy. Separate multiple IP addresses by a comma. i.e ``127.0.0.1, 10.0.0.0/8, fc00::/7``
 
 .. note::
->>>>>>> 7.1
 
   In the Valid Domains field, don't include a slash at the end. For example, use ``https://www.example.com`` instead of ``https://www.example.com/``.
 

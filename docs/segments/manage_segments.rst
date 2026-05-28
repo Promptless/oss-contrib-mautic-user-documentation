@@ -449,16 +449,9 @@ Example - Consider that today is ``2022-03-05``:
 * ``Date identified equals -1 months`` returns all Contacts identified on 2022-02-05.
 * ``Date identified greater or equal -1`` year returns all Contacts identified 2021-03-05 and after.
 * ``Date identified greater than -1`` year returns all Contacts identified after 2021-03-05.
-<<<<<<< HEAD
 
-Beside this you can specify your date with text. These formulas are **translatable**, so make sure you use them in correct format.
-||||||| 4d694ef
-  
-Beside this you can specify your date with text. These formulas are **translatable**, so make sure you use them in correct format.
-=======
 
 Beside this you can specify your date with text. These formulas are **translatable** - Mautic displays them in your current language setting.
->>>>>>> 7.1
 
 * ``birthday`` / ``anniversary``
 * ``birthday -7 days`` / ``anniversary -7 days``

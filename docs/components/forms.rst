@@ -48,17 +48,9 @@ Once you have created a new Form, you have some additional options to set.
 Details
 =======
 
-<<<<<<< HEAD
 .. image:: images/forms/standalone_form.png
    :alt: Screenshot showing standalone Form
 
-||||||| 4d694ef
-=======
-.. image:: images/forms/new_form.png
-   :width: 600
-   :alt: New Form interface at Mautic
-
->>>>>>> 7.1
 The available details fields are:
 
 * **Name** - Title of your Form, including any terms you may want to use to search for the Form.
