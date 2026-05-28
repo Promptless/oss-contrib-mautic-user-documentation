@@ -183,7 +183,11 @@ Form submit action
 
 .. vale on
 
-**Modify Contact's Segment** is available as a submit action on :ref:`Standalone Forms<creating a new form>`. With a Campaign Form, create a Campaign with a **Modify Contact's Segment** action.
+.. vale off
+
+**Modify Contact's Segment** is available as a submit action on :ref:`Forms<creating a new form>`.
+
+.. vale on
 
 1. Click **Actions**.
 
@@ -445,8 +449,16 @@ Example - Consider that today is ``2022-03-05``:
 * ``Date identified equals -1 months`` returns all Contacts identified on 2022-02-05.
 * ``Date identified greater or equal -1`` year returns all Contacts identified 2021-03-05 and after.
 * ``Date identified greater than -1`` year returns all Contacts identified after 2021-03-05.
+<<<<<<< HEAD
 
 Beside this you can specify your date with text. These formulas are **translatable**, so make sure you use them in correct format.
+||||||| 4d694ef
+  
+Beside this you can specify your date with text. These formulas are **translatable**, so make sure you use them in correct format.
+=======
+
+Beside this you can specify your date with text. These formulas are **translatable** - Mautic displays them in your current language setting.
+>>>>>>> 7.1
 
 * ``birthday`` / ``anniversary``
 * ``birthday -7 days`` / ``anniversary -7 days``
@@ -456,6 +468,10 @@ Beside this you can specify your date with text. These formulas are **translatab
 * ``this year`` / ``last year`` / ``next year``
 * ``first day of previous month`` / ``first day of January 2022``
 * ``last day of previous month`` / ``last day of January 2022``
+
+.. tip::
+
+   Relative date values like ``today``, ``tomorrow``, and ``this week`` work correctly regardless of your Mautic language setting. Switching languages doesn't affect how Segments evaluate these filters.
 
 Example (Consider that today is ``2022-03-05``):
 

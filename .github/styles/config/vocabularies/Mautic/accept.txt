@@ -26,6 +26,7 @@ Company(ies)
 Composer
 configurator
 ConnectWise
+CSR
 Contribution(s)
 CORS
 cPanel
@@ -81,6 +82,7 @@ MaxMind
 Middlewares
 middlewares
 MJML
+MIME
 MQL
 MQLs
 Multiselect
