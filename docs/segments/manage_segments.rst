@@ -303,6 +303,13 @@ Configuring Segment filters
     * Set Fields to **Available for Segments = Yes** in your Custom Field manager to display here.
 
   * Contact behavior and actions
+
+    .. vale off
+
+    * Behavioral date filters, such as **Read any email (date)** and **Sent any email (date)**, evaluate the most recent date when a Contact has multiple occurrences. For example, if a Contact read emails on January 1 and March 15, the **Read any email (date)** filter evaluates March 15 as the Contact's read date.
+
+    .. vale on
+
   * Primary Company fields
 
     * Set Fields to **Available for Segments = Yes** in your Custom Field manager to appear here.
@@ -386,6 +393,35 @@ Once you've selected a date field as your filter, such as the default **Date las
 
 Once you have selected the field you can then choose the type of operation to perform. These vary depending on the way you wish to filter your Contacts.
 
+Operators for select fields
+===========================
+
+Single-select fields, such as Country, Timezone, Region, Locale, and custom select fields, offer these operators:
+
+* **Equals** - The Contact's value exactly matches the selected option.
+* **Not equal** - The Contact's value doesn't match the selected option.
+* **Empty** - The Contact has no value for this field.
+* **Not empty** - The Contact has a value for this field.
+* **Regexp** - The Contact's value matches the specified regular expression pattern.
+* **Not regexp** - The Contact's value doesn't match the specified regular expression pattern.
+* **Including any of** - The Contact's value matches at least one of the selected options.
+* **Excluding any of** - The Contact's value matches none of the selected options.
+
+A multiselect field can hold more than one value at once, so it offers a different set of operators:
+
+* **Including any of** - The Contact's values include at least one of the selected options.
+* **Excluding any of** - The Contact's values include none of the selected options.
+* **Including all of** - The Contact's values include every selected option.
+* **Excluding all of** - The Contact's values don't include every selected option.
+* **Empty** - The Contact has no value for this field.
+* **Not empty** - The Contact has a value for this field.
+
+The two sets aren't identical. A multiselect field doesn't offer **Equals**, **Not equal**, **Regexp**, or **Not regexp**, since those compare against a single value. Instead, it adds **Including all of** and **Excluding all of** to match against every selected value.
+
+.. note::
+
+   The ``Including all of`` and ``Excluding all of`` operators appear only for multiselect fields, since they require a Contact to hold more than one value. Single-select fields, such as Country, Timezone, Region, and Locale, hold only a single value, so these operators don't apply.
+
 .. vale off
 
 Matching part of a string
@@ -449,7 +485,6 @@ Example - Consider that today is ``2022-03-05``:
 * ``Date identified equals -1 months`` returns all Contacts identified on 2022-02-05.
 * ``Date identified greater or equal -1`` year returns all Contacts identified 2021-03-05 and after.
 * ``Date identified greater than -1`` year returns all Contacts identified after 2021-03-05.
-
 
 Beside this you can specify your date with text. These formulas are **translatable** - Mautic displays them in your current language setting.
 
