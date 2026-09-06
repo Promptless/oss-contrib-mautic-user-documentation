@@ -20,7 +20,7 @@ Configure Email UTM tags
 
 .. vale on
 
-#. Open the Email and the edit details:
+#. Open the Email and edit its details:
 
    #. Go to **Channels** > **Emails**.
    #. Click the name of the Email you want to modify.
@@ -28,7 +28,7 @@ Configure Email UTM tags
 
 #. Locate the **UTM tags** dropdown menu in the right-hand panel at the bottom. Expanding this section exposes the UTM parameter fields, which sit separately from the Email body content.
 
-#. Fill in the UTM fields you want to apply to links inside this block:
+#. Fill in the UTM fields you want to apply to links in the Email:
 
    * **Campaign source**: where the Email originates, for example, ``newsletter`` or ``mautic``
    * **Campaign medium**: the Channel type, for example, ``email``
