@@ -40,7 +40,7 @@ Add UTM recording
 
    .. code-block:: text
 
-      https://example.com/landing-Page?utm_source=newsletter&utm_medium=Email&utm_campaign=spring_sale_2026
+      https://example.com/landing-Page?utm_source=newsletter&utm_medium=email&utm_campaign=spring_sale_2026
 
 #. Test the setup by visiting the Landing Page using a URL with UTM parameters, submitting the Form, and checking the Contact profile.
 
@@ -58,7 +58,8 @@ The choice to use three parameters rather than all five reflects a practical min
 
 After saving, the **Record UTM tags** action appears in the Form's action list. When a Contact submits the Form from a UTM-tagged URL, their profile displays a **UTM tags recorded** timeline entry, separate from the Form submission entry, displaying the associated Form ID and captured field values. If UTM fields remain empty after a test submission, the URL used during testing didn't contain UTM parameters. This indicates a website-side link configuration issue rather than a Mautic configuration issue.
 
-.. TODO: add screenshot - Contact timeline showing a "UTM tags recorded" entry with populated UTM fields and a FORMID reference
+.. image:: ../channels/images/utm_tags/utm_tags_recorded_timeline.png
+   :alt: Contact activity timeline showing a 'UTM tags recorded' entry with populated UTM fields and a Form ID reference
 
 .. seealso::
 
