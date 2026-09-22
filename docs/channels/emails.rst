@@ -817,9 +817,11 @@ For example:
   
   <a href="https://mautic.example.com/" data-mautic-disable-tracking="true">Non tracked link</a>
 
-.. note::
+.. warning::
 
-   Use ``data-mautic-disable-tracking="true"`` for all new Emails and templates, as Mautic has deprecated the ``mautic:disable:tracking`` attribute.
+   Mautic has deprecated the ``mautic:disable-tracking`` attribute, and Mautic 8.0 removes it. Use
+   ``data-mautic-disable-tracking="true"`` for all new Emails and templates. For details, see the
+   `Mautic 8.0 upgrade guide <https://github.com/mautic/mautic/blob/8.x/UPGRADE-8.0.md>`_.
 
 Link validation
 ***************
