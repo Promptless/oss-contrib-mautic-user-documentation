@@ -17,6 +17,7 @@ boolean
 booleans
 cc
 CCPA
+CKEditor
 Citrix
 Clearbit
 CloudAMQP
@@ -30,6 +31,7 @@ CSR
 Contribution(s)
 CORS
 cPanel
+CPC
 CRM
 cron
 Cron
@@ -40,6 +42,7 @@ Do Not Contact
 DNC
 Dripflow
 DSN
+DWC
 Dynamic Web Content
 FALSE
 Focus Item
@@ -104,6 +107,8 @@ Pipedrive
 Piwik
 POST
 post
+prefetch
+prerender
 PUT
 Rackspace
 Remarketing
@@ -123,6 +128,7 @@ SMTP
 SNS
 SparkPost
 SSO
+strikethrough
 sublicense
 SugarCRM
 Suhosin

@@ -201,7 +201,7 @@ Event history tracks any engagements between Mautic and a Contact. To find certa
 
 **Added through API** - Contact created through API.
 
-**Asset Downloaded** - Lists which Assets a Contact downloaded from your Landing Pages or website. Combining this information with other data can help with analyzing what led a Contact to download the Asset.
+**Asset Downloaded** - Lists which Assets a Contact downloaded from your Landing Pages or website. Combining this information with other data can help with analyzing what led a Contact to download the Asset. If you have deleted the Asset, the timeline displays ``Deleted asset`` without a link or preview.
 
 **Campaign Action Triggered** - Actions within Campaigns which have already happened.
 
@@ -266,6 +266,26 @@ If the message is ``Pending``, clicking the X button cancels it.
 **Video View Event** - Details in this event type include the length of time a prospect watched the video, the percentage of the video watched, the page where the video displays - known as Referrer - and the URL of the video file.
 
 Some Plugins contain specific events. The events display and are searchable after installing and configuring the Plugin.
+
+Exporting the change log
+------------------------
+
+You can export the Contact's change log to CSV for offline analysis or record-keeping. The CSV includes columns for each event's timestamp, action, details, and the User or source that triggered the change.
+
+To export the change log:
+
+.. vale off
+
+#. Click the down arrow icon to open dropdown menu in the upper right corner of the Contact detail page.
+#. Select the export option.
+
+.. vale on
+
+.. image:: images/contact_change_log_export_menu.png
+    :align: center
+    :alt: Contact detail view with the Options dropdown open, showing the Export item
+
+|
 
 Notes
 =====
@@ -343,7 +363,15 @@ Send Email to Contact
 
 .. vale on
 
-This option enables Users to send an individual Email, either manually created with the builder or from a template Email. The **From Name** and **From Email Address** default to the User sending the individual message.
+This option lets Users send an individual Email, either manually created with the builder or from a template Email. The **From Name** and **From Email Address** default to the User sending the message.
+
+.. vale off
+
+Enter a **Subject** when you send the Email. If you leave it empty, Mautic displays the error 'A subject is required.'
+
+.. vale on
+
+.. _Contact tracking:
 
 Contact tracking
 ****************
