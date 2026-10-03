@@ -388,8 +388,10 @@ For example:
 
 .. warning::
 
-   Mautic has deprecated the ``mautic:disable-tracking`` attribute, and Mautic 8.0 removes it. Use
-   ``data-mautic-disable-tracking="true"`` for all new Emails and templates. For details, see the
+   Mautic deprecates the ``mautic:disable-tracking`` attribute since Mautic 7.1 and removes it in
+   Mautic 8. Use ``data-mautic-disable-tracking="true"`` instead in all Emails and templates. See
+   `Tracking links in Emails <https://docs.mautic.org/en/8.0/channels/emails.html#tracking-links-in-emails>`_
+   in the Mautic 8.0 documentation and the
    `Mautic 8.0 upgrade guide <https://github.com/mautic/mautic/blob/8.x/UPGRADE-8.0.md>`_.
 
 Unsubscribing
