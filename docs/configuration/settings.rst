@@ -812,7 +812,7 @@ Mautic tracking settings
 
 * **Append Segment IDs to Tracking URLs** - Select **Yes** to enable Mautic to append Segment IDs to the tracking URLs in Emails sent from Mautic. This allows Mautic to track which Segment a Contact belongs to when they click a link in an Email.
 
-* **Record aggregate analytics** - Aggregate analytics are totals that aren't linked to any Contact, such as the number of submissions a Form receives. This setting is **Yes** by default. Select **No** to stop recording these totals in the features that support this setting. This setting doesn't change how Mautic tracks Contacts.
+* **Record aggregate analytics** - Aggregate analytics are totals that Mautic doesn't link to any Contact, such as the number of submissions a Form receives. Mautic sets this to **Yes** by default. Select **No** to stop recording these totals in the features that support this setting. This setting doesn't change how Mautic tracks Contacts.
 
 .. note:: 
 
